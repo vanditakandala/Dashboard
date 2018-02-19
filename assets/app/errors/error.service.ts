@@ -8,5 +8,6 @@ export class ErrorService {
     handleError(error:any){
         const errorData = new Error(error.error.title, error.error.error.message);
         this.errorOccured.emit(errorData);
+        console.log(errorData);
     }
 }
