@@ -11,13 +11,13 @@ import {MessageService} from "./message.service";
             display: inline-block;
             font-style: italic;
             font-size: 12px;
-            width: 80%;
+            width: 70%;
         }
         .config {
             display: inline-block;
             text-align: right;
             font-size: 12px;
-            width: 19%;
+            width: 20%;
         }
     `]
 })

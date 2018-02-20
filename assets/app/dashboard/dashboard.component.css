@@ -1,0 +1,13 @@
+.messages {
+    max-height: 660px;
+    overflow-y: scroll;
+    background-color: white;
+
+}
+
+chart {
+    width: 95% !important;
+    margin: 0 auto;
+    display: block;
+}
+

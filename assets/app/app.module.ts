@@ -19,11 +19,14 @@ import {HttpClientModule} from "@angular/common/http";
 import {ErrorComponent} from "./errors/error.component";
 import {ErrorService} from "./errors/error.service";
 import {AuthService} from "./auth/auth.service";
+import {DashboardComponent} from "./dashboard/dashboard.component";
+import {ChartModule} from "angular2-highcharts";
 
 @NgModule({
     declarations: [
         AppComponent,
         MessageComponent,
+        DashboardComponent,
         MessageListComponent,
         MessageInputComponent,
         AuthenticationComponent,
@@ -32,9 +35,11 @@ import {AuthService} from "./auth/auth.service";
         LogoutComponent,
         SignupComponent,
         SigninComponent,
-        ErrorComponent
+        ErrorComponent,
+
     ],
-    imports: [BrowserModule, FormsModule, routing, HttpClientModule],
+    imports: [BrowserModule, FormsModule, routing, HttpClientModule,ChartModule.forRoot(require('highcharts'))
+    ],
     providers: [AuthService, ErrorService],
     bootstrap: [AppComponent]
 })

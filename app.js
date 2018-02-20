@@ -8,6 +8,8 @@ var bodyParser = require('body-parser');
 var appRoutes = require('./routes/app');
 var messageRoutes = require('./routes/messages');
 var userRoutes = require('./routes/user');
+var placeRoutes = require('./routes/places');
+var salesRoutes = require('./routes/sales');
 
 var mongoose = require('mongoose');
 
@@ -36,7 +38,10 @@ app.use(function (req, res, next) {
 
 app.use('/message', messageRoutes);
 app.use('/user', userRoutes);
+app.use('/places', placeRoutes);
+app.use('/sales', salesRoutes);
 app.use('/', appRoutes);
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
