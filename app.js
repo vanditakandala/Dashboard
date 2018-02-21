@@ -15,7 +15,9 @@ var mongoose = require('mongoose');
 
 var app = express();
 
-mongoose.connect('mongodb://localhost:27017/seed-project');
+//mongoose.connect('mongodb://localhost:27017/seed-project');
+
+mongoose.connect('mongodb://Dashboard:Dashboard@dashboard-shard-00-00-euixe.mongodb.net:27017,dashboard-shard-00-01-euixe.mongodb.net:27017,dashboard-shard-00-02-euixe.mongodb.net:27017/seed-project?ssl=true&replicaSet=Dashboard-shard-0&authSource=admin');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

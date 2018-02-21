@@ -20,14 +20,9 @@ export class DashboardComponent implements OnInit{
     constructor (private dashboardService:DashboardService) {}
 
     ngOnInit(){
-        this.dashboardService.getPlaces()
-            .subscribe(
-                (places: Place[]) => {
-                    this.places = places;
-                    this.getGraph();
-                }
-            );
 
+        this.places = this.dashboardService.getPlaces();
+        this.getGraph();
 
     }
 
